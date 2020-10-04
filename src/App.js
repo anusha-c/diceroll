@@ -12,10 +12,13 @@ function App() {
   const[dicenum,setDiceNum]=useState(0);
   const[die,setDie]=useState(null);
   return (
+
     <div style={{ textAlign: 'center' ,background:'#AC1DF3'}}>
-       <div style={{color:'white'}}><RollDice dicenumber= {dicenum}/> </div>
+
+       <div style={{color:'white'}}><RollDice dicenumber= {dicenum}/></div>
        <div><img src = {die} alt = {die}></img></div>
-      <div style={{backgroundImage:buttonImg}}><button style={{height:50, width:150, background:"white", fontSize:24, fontFamily:"sans serif"}} onClick = {() => {
+      <div style={{backgroundImage:buttonImg}}>
+        <button class = "button" style={{height:50, width:150, background:'purple',color:"white", fontSize:18,margin:'4px 2px',border:null,padding: '0px',display:'inline-block',cursor:'pointer'}} onClick = {() => {
         let randnum = Math.floor(1+Math.random()*6);
         switch(randnum){
           case(1):{setDiceNum(1);
